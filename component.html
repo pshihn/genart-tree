@@ -1,0 +1,29 @@
+<link rel="import" href="genart-tree.html">
+<dom-module id="genart-tree-composer">
+  <template>
+    <style is="custom-style" include="app-styles">
+      :host {
+        display: block;
+      }
+    </style>
+  </template>
+  <script>
+    class GenArtTreeComposer extends Polymer.Element {
+      static get is() { return 'genart-tree-composer'; }
+      get sharedState() {
+        return {
+          properties: {},
+          collections: {}
+        }
+      }
+      get isReady() {
+        return true;
+      }
+      connectedCallback() {
+        super.connectedCallback();
+        this.dispatchEvent(new CustomEvent('shared-state-change', { bubbles: true, composed: true }));
+      }
+    }
+    window.customElements.define(GenArtTreeComposer.is, GenArtTreeComposer);
+  </script>
+</dom-module>

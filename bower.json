@@ -1,6 +1,6 @@
 {
   "name": "genart-tree",
-  "main": "genart-tree.html",
+  "main": "component.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0"
   },
